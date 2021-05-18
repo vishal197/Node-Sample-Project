@@ -1,0 +1,72 @@
+<!-- 
+
+  File: index.ejs
+  Name: Amin Patel
+  ID: 300968902
+  Date: Feb 15th, 2021
+
+-->
+
+    <%- include ../partials/header.ejs%>
+
+    <%- include ../partials/main_nav.ejs%>
+
+
+    <!-- Main Content -->
+
+    <body>
+      <main class="container">
+        <div class="jumbotron">
+          <h1 class="display-4"><%= title %></h1>
+          <p class="lead"></p>
+          <hr class="my-4">
+          <p>Please login</p>
+          <hr class="my-4">
+
+          <!-- Message Area -->
+
+        <% if(messages.length > 0) {%>
+            <div class="alert alert-danger">
+                <%= messages %>
+            </div>
+        <% } %>
+
+        <div class="row">
+            <div class="offset-md-1 col-md-10">
+                <form action="" method="POST" autocomplete="off">
+
+                    <fieldset class="form-group">
+                        <label for="username">Username: </label>
+                        <input type="text" class="form-control"
+                        name="username" placeholder="Enter Username"
+                        id="username" required autofocus>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="password">Password: </label>
+                        <input type="password" class="form-control"
+                        name="password" placeholder="Enter Password"
+                        id="password" required>
+                        or
+                        <a href="/register">Register Here</a>
+                    </fieldset>
+                    <br>
+                    <fieldset class="form-group text-left">
+                        <input type="submit" class="btn btn-success" value="Login">
+                        <a href="/">
+                            <input type="button" class="btn btn-warning" value="Cancel">
+                        </a>
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+
+        </div>
+      </main>
+
+
+
+    <%- include ../partials/footer_nav.ejs%>
+
+    <%- include ../partials/footer.ejs%>

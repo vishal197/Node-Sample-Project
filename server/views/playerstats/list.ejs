@@ -1,0 +1,87 @@
+<!-- 
+
+  File: index.ejs
+  Name: Amin Patel
+  ID: 300968902
+  Date: Feb 15th, 2021
+
+-->
+<%- include ../partials/header.ejs%>
+
+<%- include ../partials/main_nav.ejs%>
+<!-- Main Content -->
+<body>
+	<main class="container">
+		<div class="jumbotron">
+			<div class="offset-md-1 col-md-10">
+			<h1 class="display-4"><%= title %></h1>
+			<p class="lead"></p>
+			<hr class="my-4">
+
+			<% if(typeof displayName == 'string' && displayName) { %>
+				
+				<p><a href="/playerstats-list/add" class="btn btn-primary" role="button">
+					<i class="fas fa-plus-circle"></i> Add a Player</a></p>
+				<% } %>
+				<hr class="my-4">
+				
+				<table class="table table-bordered table-striped table-hover">
+					<!--Header Row-->
+					<tr>
+						<th class="text-center col-1">Player</th>
+						<th class="text-center col-1">Season</th>
+						<th class="text-center col-1">Team</th>
+						<th class="text-center col-1">Position</th>
+						<th class="text-center col-1">GP</th>
+						<th class="text-center col-1">Goals</th>
+						<th class="text-center col-1">Assists</th>
+						<th class="text-center col-1">Points</th>
+						
+						<% if(typeof displayName == 'string' && displayName) { %>
+
+						<th class="text-center col-2"></th>
+						<th class="text-center col-2"></th>
+
+						<% } %>
+
+						<th></th>
+					</tr> <!-- Repeatable template row--> 
+					
+					<% for (let count=0; count <playerstatsList.length; count++) { %> 
+						
+						<tr>
+						<td class="text-center col-1"><%=playerstatsList[count].name %></td>
+						<td class="text-center col-1"><%=playerstatsList[count].season %></td>
+						<td class="text-center col-1"><%=playerstatsList[count].team %></td>
+						<td class="text-center col-1"><%=playerstatsList[count].pos %></td>
+						<td class="text-center col-1"><%=playerstatsList[count].gp %></td>
+						<td class="text-center col-1"><%=playerstatsList[count].goals %></td>
+						<td class="text-center col-1"><%=playerstatsList[count].assists %></td>
+						<td class="text-center col-1"><%=playerstatsList[count].points %></td>
+						
+						<% if(typeof displayName == 'string' && displayName) { %>
+
+						<td class="text-center col-2">
+					<a href="/playerstats-list/edit/<%=playerstatsList[count]._id %>" class="btn btn-primary btn-sm"> 
+							<i class="fas fa-pencil-alt"></i> Edit</a>
+						</td>
+						
+						<td class="text-center col-2">
+							<a href="/playerstats-list/delete/<%= playerstatsList[count]._id %>" class="btn btn-danger btn-sm">
+							<i class="fas fa-trash-alt"></i> Delete</a>
+						</td>
+						<% } %>
+
+					</tr> 
+					
+					<% } %>
+				</table>
+
+
+					</div>
+				</div>
+			</main>
+            
+            <%- include ../partials/footer_nav.ejs%>
+            
+			<%- include ../partials/footer.ejs%>

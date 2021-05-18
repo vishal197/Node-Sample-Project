@@ -1,0 +1,64 @@
+<!-- 
+
+  File: services.ejs
+  Name: Amin Patel
+  ID: 300968902
+  Date: Feb 15th, 2021
+
+-->
+
+<%- include partials/header.ejs%>
+
+  <%- include partials/main_nav.ejs%>
+
+
+    <!-- Main Content -->
+
+    <body>
+      <main class="container">
+        <div class="jumbotron">
+          <h1 class="display-4"><%= title %></h1>
+          <p class="lead">Fill out the form below to get in touch. Please allow 1-2 days for a response.</p>
+          <hr class="my-4">
+          <p>NHL - National Hockey League</p>
+          <p>Email: contact@nhl.com</p>
+          <p>Phone: 1-800-NHL-8649</p>
+          <hr class="my-4">
+
+          <div class="mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="aboutFirstNameInput" placeholder="John">
+          </div>
+
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="aboutLastNameInput" placeholder="Smith">
+          </div>
+
+          <div class="mb-3">
+            <label for="contactnumber" class="form-label">Contact Number</label>
+            <input type="text" class="form-control" id="aboutNumberInput" placeholder="647-123-0123">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="aboutEmailInput" placeholder="name@example.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="aboutMessageInput" rows="3"></textarea>
+          </div>
+
+          <p class="lead">
+            <p>&nbsp;</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
+          </p>
+        </div>
+      </main>
+
+
+
+      <%- include partials/footer_nav.ejs%>
+
+        <%- include partials/footer.ejs%>

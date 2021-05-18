@@ -1,0 +1,113 @@
+<!-- 
+
+  File: index.ejs
+  Name: Amin Patel
+  ID: 300968902
+  Date: Feb 15th, 2021
+
+-->
+<%- include ../partials/header.ejs%>
+
+<%- include ../partials/main_nav.ejs%>
+
+<!-- Main Content -->
+
+<body>
+	<main class="container">
+		<div class="jumbotron">
+			<div class="offset-md-1 col-md-10">
+			<h1 class="display-4"><%= title %></h1>
+			<p class="lead"></p>
+			<hr class="my-4">
+            <p>Add a new player to the Player Stats View List</p>
+            <hr class="my-4">
+
+
+                <form class="form" method="POST">
+                    <div class="form-group">
+                        <label for="nameTextField">Player</label>
+                        <input type="text" class="form-control"
+                        id="nameTextField"
+                        placeholder="Enter the Name"
+                        name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="seasonTextField">Season</label>
+                        <input type="text" class="form-control"
+                        id="seasonTextField"
+                        placeholder="Enter the Season"
+                        name="season" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teamTextField">Team</label>
+                        <input type="text" class="form-control"
+                        id="teamTextField"
+                        placeholder="Enter the Team"
+                        name="team" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="positionTextField">Position</label>
+                        <input type="text" class="form-control"
+                        id="positionTextField"
+                        placeholder="Enter the Position"
+                        name="position" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gpTextField">Games Played</label>
+                        <input type="text" class="form-control"
+                        id="gpTextField"
+                        placeholder="Enter the amount of Games Played"
+                        name="gp" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goalsTextField">Goals</label>
+                        <input type="text" class="form-control"
+                        id="goalsTextField"
+                        placeholder="Enter the amount of Goals"
+                        name="goals" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assistsTextField">Assists</label>
+                        <input type="text" class="form-control"
+                        id="assistsTextField"
+                        placeholder="Enter the amount of Assists"
+                        name="assists" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pointsTextField">Points</label>
+                        <input type="text" class="form-control"
+                        id="pointsTextField"
+                        placeholder="Enter the amount of Points"
+                        name="points" required>
+                    </div>
+
+                    <br>
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-edit"></i> Submit</button>
+
+                        <a href="/playerstats-list" class="btn btn-warning">
+                            <i class="fas fa-undo"></i> Cancel</a>
+
+
+                </form>
+				
+
+
+
+
+                 </div>
+                </div>
+			</main>
+
+
+
+<%- include ../partials/footer_nav.ejs%>
+            
+<%- include ../partials/footer.ejs%>

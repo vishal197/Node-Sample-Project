@@ -1,0 +1,43 @@
+body {
+background-color: #e7dec8;
+/*background-image: url(/assets/images/comp-bg.jpg);*/
+}
+
+a {
+  color: #00B7FF;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.id {
+  display: block;
+  margin-left: right;
+  margin-right: right;
+  width: 28%;
+}
+
+.product-1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.product-2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.product-3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
